@@ -31,7 +31,7 @@ export default class PageNumbersComponent extends Component {
 
   // only run if a closure action has been passed
   _runAction(key, ...args) {
-    const action = get(this, key);
+    const action = get(this.args, key);
     if (typeof action === 'function') {
       action(...args);
     }
